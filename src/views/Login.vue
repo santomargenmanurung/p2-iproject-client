@@ -54,7 +54,23 @@
 
 <script>
 export default {
-  name: 'Login'
+  name: 'Login',
+  data () {
+    return {
+      email: '',
+      password: ''
+    }
+  },
+  methods: {
+    loginEvent () {
+      this.$store.dispatch('loginEvent', {
+        email: this.email, password: this.password
+      })
+    },
+    eventRegister () {
+      this.$router.push('/admin/register')
+    }
+  }
 }
 </script>
 
