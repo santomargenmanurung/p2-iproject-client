@@ -26,6 +26,22 @@ export default new Vuex.Store({
             text: err.response.data.message
           })
         })
+    },
+    loginEvent (context, payload) {
+      axios
+        .post('admin/login', payload)
+        .then(({ data }) => {
+          localStorage.setItem('acces_token', data.acces_token)
+          router.push('/')
+        })
+        .catch(err => {
+          console.log(err)
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: err.response.data.message
+          })
+        })
     }
   },
   modules: {

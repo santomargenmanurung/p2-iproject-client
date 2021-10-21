@@ -115,7 +115,7 @@ export default {
         password: this.password,
         address: this.address,
         phoneNumber: this.phoneNumber,
-        gender: this.city
+        gender: this.gender
       })
     }
   }
