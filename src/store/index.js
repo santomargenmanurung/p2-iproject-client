@@ -36,11 +36,11 @@ export default new Vuex.Store({
         })
         .catch(err => {
           console.log(err)
-          // Swal.fire({
-          //   icon: 'error',
-          //   title: 'Oops...',
-          //   text: err.response.data.message
-          // })
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: err.response.data.message
+          })
         })
     }
   },
